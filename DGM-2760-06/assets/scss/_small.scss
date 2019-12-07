@@ -1,0 +1,180 @@
+$max-width: 100vw;
+
+$color1: #222;
+
+%flex-row
+{
+    display: flex;
+    flex-direction: row;
+}
+
+%flex-col
+{
+    display: flex;
+    flex-direction: column;
+}
+
+%just-cont-cent
+{
+    justify-content: center;
+}
+
+%align-items-cent
+{
+    align-items: center;
+}
+
+%mx-width
+{
+    max-width: $max-width;
+}
+
+body
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0rem 0rem 0rem 0rem;
+    background-color: #111;
+}
+
+header
+{
+    @extend %flex-col;
+    font-size: 1.2rem;
+    width: 100%;
+    margin: 0rem;
+    padding: 0rem;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    div
+    {
+        justify-content: flex-start;
+        min-height: 40vh;
+        h1
+        {
+            font-size: 3.8rem;
+            padding-bottom: 0rem;
+            margin-bottom: 1rem;
+            line-height: 4rem;
+        }
+    }
+}
+
+.landing-page
+{
+    min-height: 20vh;
+}
+
+section
+{
+    @extend %flex-col, %mx-width;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    h1
+    {
+        margin-bottom: -1rem;
+    }
+    h2
+    {
+        margin-top: 2rem;
+    }
+    h3
+    {
+        margin: 1.5rem 0rem .5rem 0rem;
+    }
+    p
+    {
+        line-height: 1.8rem;
+    }
+}
+
+footer
+{
+    @extend %flex-row, %just-cont-cent;   
+    width: 100%;
+    background-color: $color1;
+    height: 50px;
+    font-size: 1rem;
+    align-items: center;
+    margin-top: 2.5rem;
+    color: #fff;
+}
+
+.active
+{
+    background-color: darken($color1, 10%);
+}
+
+.logo-head
+{
+    margin: .5rem 0rem 0rem .8rem;
+}
+
+main
+{
+    color: #fff;
+    margin: .8rem;
+}
+
+.gGCol
+{
+    @extend %flex-col;
+    width: 50%;
+}
+
+.guessingGame
+{
+    @extend %flex-row;
+    justify-content: flex-start;
+    min-height: 25vh;
+    
+}
+
+#numberGuess
+{
+    border-radius: 10rem 0rem 0rem 10rem;
+    text-align: center;
+    width: 50%;
+}
+
+#subGuess
+{
+    border-radius: 0rem 10rem 10rem 0rem;
+    color: #111;
+    background-color: #fff;
+}
+
+input
+{
+    margin: 0rem;
+    padding: .2rem;
+}
+
+.instructions
+{
+    margin-bottom: 4rem;
+}
+
+#playerAward
+{
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.firstP
+{
+background-image: url(/assets/img/1stPR.svg);
+}
+
+.secondP
+{
+background-image: url(/assets/img/2ndPR.svg);
+}
+
+.thirdP
+{
+background-image: url(/assets/img/3rdPR.svg);
+}
