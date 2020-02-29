@@ -258,6 +258,25 @@ input {
   header div {
     min-height: 20vh;
   }
+  main {
+    display: -ms-grid;
+    display: grid;
+    grid: auto / 1fr 1fr 1fr 1fr;
+    gap: 1rem 2rem;
+  }
+  main .landing-page {
+    grid-column: span 4;
+  }
+  main .content {
+    grid-column: span 3;
+  }
+  main .output {
+    grid-column: span 1;
+  }
+  button {
+    border-radius: 5rem;
+    max-width: 50%;
+  }
 }
 
 @media only screen and (min-width: 60rem) {

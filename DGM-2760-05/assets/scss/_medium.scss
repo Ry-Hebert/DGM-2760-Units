@@ -20,3 +20,28 @@ header
         min-height: 20vh;
     }
 }
+
+main
+{
+    display: grid;
+    grid: auto / 1fr 1fr 1fr 1fr;
+    gap: 1rem 2rem;
+    .landing-page
+    {
+        grid-column: span 4;
+    }
+    .content
+    {
+        grid-column: span 3;
+    }
+    .output
+    {
+        grid-column: span 1;
+    }
+}
+
+button
+{
+    border-radius: 5rem;
+    max-width: 50%;
+}

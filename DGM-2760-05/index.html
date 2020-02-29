@@ -8,7 +8,7 @@
     <meta name="author" content="John Doe">
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     <title>U-03 Guessing Game</title>
-    <link rel="stylesheet" href="/assets/scss/styles.css">
+    <link rel="stylesheet" href="assets/scss/styles.css">
 </head>
 <body onload="contentLoad();">
     <header>
@@ -21,38 +21,38 @@
     </header>
     <main>
         <section class="landing-page">
-            <h1>(High / Lo) Number Guessing Game</h1>
+            <h1>The Arborist</h1>
             <h2>What I learned</h2>
             <ul>
-                <li>creating a cryptographically secure random numbers</li>
-                <li>Manipulating DOM Elements (adding, classes, id's, etc.)</li>
-                <li>Update and provide feedback on user inputs.</li>
+                <li>Error checking on inputs</li>
+                <li>Manipulating array values</li>
+                <li>Event Handlers</li>
             </ul>
-            <h2>Instructions</h2>
-            <p class="instructions">
-                The objective of the game is to try and guess the randomly chosen number (any number from 1 to 15) in as few tries as possible. You will be awarded a ribbon based upon your score.
-            </p>
         </section>
-        <section class="guessingGame">
-            <div class="gGCol">
-                <h3>Play</h3>
-                <div class="col1">
-                        <input type="number" id="numberGuess">
-                        <input type="submit" onclick="submitGuess()" id="subGuess">
-                </div>
+        <section class="content">
+            <h2>Adding Tree Practice</h2>
+            <button id="addRedEnd" onclick="">Add a Redwood to the end</button>
+            <button id="addPearStart" onclick="">Add a Pear to the start</button>
+            <h2>Removing Tree Practice</h2>
+            <button id="rmv1" onclick="">Remove the first tree</button>
+            <button id="rmv2" onclick="">Remove the second tree down</button>
+            <button id="rmvLast" onclick="">Remove the last tree</button>
+            <h2>Manipulating the tree list</h2>
+            <button id="az" onclick="">Sort the trees A-Z</button>
+            <button id="lower" onclick="">Make all trees lowercase</button>
+            <h2>Display elements</h2>
+            <button id="dis3" onclick="">Display element three</button>
+            <button id="dis4" onclick="">Display element four</button>
+        </section>
+        <section class="output">
+            <h2>The Tree List</h2>
+            <div id="outDiv">
+                <p id="outP">
+
+                </p>
             </div>
-            <div class="gGCol">
-                <h3>Trys</h3>
-                <p id="tryCount">0</p>
-            </div>
-            <div class="gGCol">
-                <h3>Feedback</h3>
-                <p id="feedback"></p>
-            </div>
-            <div class="gGCol">
-                <h3>Award</h3>
-                <div id="playerAward"></div>
-            </div>
+            <h2>Error Messages:</h2>
+            <p id="errorM"></p>
         </section>
     </main>
     <footer>
