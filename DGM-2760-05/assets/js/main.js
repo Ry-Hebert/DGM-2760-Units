@@ -9,8 +9,7 @@ contentLoad = () =>
 
     pos1.textContent=`The Arborist`
     pos2.textContent=``
-
-    document.querySelectorAll('button').onclick=onClickFunk()
+    
     displayTrees()
 }
 
@@ -20,8 +19,6 @@ displayTrees = () =>
     tArr.forEach(x => {if(aOfTrees == null){aOfTrees = `${x} <br>`}else{aOfTrees += `${x} <br>`}})
     output.innerHTML = `<p>${aOfTrees}</p>`
 }
-
-document.querySelector('#addRedEnd').onclick = addEnd()
 
 addEnd = () =>
 {
@@ -81,3 +78,5 @@ dis4 = () =>
 {
     output.innerHTML = `<p>${tArr[3]}</p>`
 }
+
+document.querySelector('#addRedEnd').onclick = addEnd
