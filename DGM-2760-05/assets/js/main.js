@@ -1,4 +1,5 @@
 let tArr = ['Oak', 'Pine', 'Aspen', 'Bald Cypress']
+let lowerCaseA = []
 let errOut = document.querySelector('#errorM')
 let output = document.querySelector('#outP')
 
@@ -64,7 +65,9 @@ aToZ = () =>
 
 lowerCase = () =>
 {
-    tArr.forEach(toLocaleLowerCase)
+    tArr.forEach((item) => {lowerCaseA.push(item.toLocaleLowerCase())})
+    tArr = lowerCaseA
+    lowerCaseA = []
     console.log(tArr)
     displayTrees()
 }
@@ -80,3 +83,11 @@ dis4 = () =>
 }
 
 document.querySelector('#addRedEnd').onclick = addEnd
+document.querySelector('#addPearStart').onclick = addStart
+document.querySelector('#rmv1').onclick = rmv1
+document.querySelector('#rmv2').onclick = rmv2
+document.querySelector('#rmvLast').onclick = rmvLast
+document.querySelector('#az').onclick = aToZ
+document.querySelector('#lower').onclick = lowerCase
+document.querySelector('#dis3').onclick = dis3
+document.querySelector('#dis4').onclick = dis4
