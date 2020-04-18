@@ -2,3 +2,13 @@ body
 {
     padding: 5rem 5rem 0rem 5rem;
 }
+
+.gGRow
+{
+    grid: auto / 1fr 1fr 1fr;
+}
+
+.gGCol > *
+{
+    justify-content: center;
+}

@@ -1,92 +1,34 @@
-let guessCount = 0
-let findVar = 15
-randomGen = (x) =>{return window.crypto.getRandomValues(new Uint32Array(1))[0] % x}
-// Because we're trying to get a random number between 1 and 15 we are going to pass 15 (Our number of numbers we're looking for) add then add +1 to the results of randomGen(15)(Which should provided us with numbers between 0-14) so that our value of randomNumber will be somewhere between 1-15.
-const randomNumber = randomGen(findVar) + 1
-// Generates a more cryptographically secure random number than simply (Math.random). The % operator returns the remainder of the random number divided by 15.
-
-
-checkGuess = (x, y) =>
+randomGen = (x) =>
 {
-    let check = x == y
-    console.log(check)
-    if(check == true){return check}
-    else
-    {
-        if(x > y){return 'Your Guess was Too High'}
-        else{return 'Your Guess was Too Low'}
-    }
+    let y = window.crypto.getRandomValues(new Uint32Array(1))[0] % x 
+    return y+1
 }
+// Generates a more cryptographically secure random number than simply (Math.random). The % operator returns the remainder of the random number divided by x the variable passed to tell us up to what number we want a random number between.
 
 contentLoad = () =>
 {
     let pos1 = document.querySelector('#pageTitle')
     let pos2 = document.querySelector('#pageSlogan')
+    let pos3 = document.querySelector('#copyright')
 
-    pos1.textContent=`Guessing Game`
-    pos2.textContent=`This is a simple number based guessing game.`
+    pos1.textContent=`Nonsense Story`
+    pos2.textContent=`String Manipulation`
+    pos3.textContent=`Copyright © ${new Date().getFullYear()} Ryan Hébert`
 }
 
-submitGuess = () =>
+storyOut = () =>
 {
-    let feedbackR = null
-    let tryCountR = null
-    let playerAwardR = null
-    // Logged to Console for testing purposes.
-    console.log(`Random Number is: ${randomNumber}`)
-    let guess = document.querySelector('#numberGuess').value;
+    let nouns = document.querySelector('#noun').value
+    let adjs = document.querySelector('#adj').value
+    let verbs = document.querySelector('#verb').value
+    nouns = nouns.toLowerCase().split(/\s+/)
+    adjs = adjs.toLowerCase().split(/\s+/)
+    verbs = verbs.toLowerCase().split(/\s+/)
 
-    // Check to see if value is grabbed
-    console.log(`Player guess is: ${guess}`);
+    console.log(nouns,adjs,verbs)
 
-    if(guess < 1 || guess > 15)
-    {
-        feedbackR = document.querySelector('#feedback')
-        feedbackR.textContent = 'Please chose a number between 1 and 15'
-    }
-    else
-    {
-        let check = checkGuess(guess, randomNumber)
-
-        if(check == true)
-        {
-            feedbackR = document.querySelector('#feedback')
-            feedbackR.textContent = 'You are Correct!'
-
-            guessCount++
-            tryCountR = document.querySelector('#tryCount')
-            tryCountR.textContent = guessCount
-            switch(guessCount)
-            {
-                case 1:
-                case 2:
-                case 3:
-                    playerAwardR = document.querySelector('#playerAward')
-                    playerAwardR.className = 'firstP'
-                    break
-                case 4:
-                case 5:
-                case 6:
-                    playerAwardR = document.querySelector('#playerAward')
-                    playerAwardR.className = 'secondP'
-                    break
-                default:
-                    playerAwardR = document.querySelector('#playerAward')
-                    playerAwardR.className = 'thirdP'
-                    break
-
-            }
-
-        }
-        else
-        {
-            feedbackR = document.querySelector('#feedback')
-            feedbackR.textContent = check
-            guessCount++
-            tryCountR = document.querySelector('#tryCount')
-            tryCountR.textContent = guessCount
-        }
-
-    }
-
+    let nonsenseStory = `There once was a ${nouns[0]} named ${nouns[1]}, who wasn't very ${adjs[0]}. Though they ${verbs[0]}, and they ${verbs[0]} with great ${adjs[1]} they just couldn't help out the ${nouns[2]}. So they decided to enlist the help of ${nouns[3]}, ${nouns[4]}, ${nouns[5]}, and ${nouns[6]}. With them all gathered they made quite a team and ${adjs[2]} team and thus the began to ${verbs[1]}`
+    document.querySelector('#storyOut').innerHTML = nonsenseStory
 }
+
+document.querySelector('#storySub').onclick = storyOut

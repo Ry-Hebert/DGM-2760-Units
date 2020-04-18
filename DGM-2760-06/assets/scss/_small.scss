@@ -29,6 +29,12 @@ $color1: #222;
     max-width: $max-width;
 }
 
+%grid-12
+{
+    display: grid;
+    grid: auto / repeat(12, minmax(0, 1fr));
+}
+
 body
 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -121,7 +127,25 @@ main
 .gGCol
 {
     @extend %flex-col;
-    width: 50%;
+    min-width: 100%;
+    justify-content: center;
+    >*
+    {
+        width: 100%;
+        display: grid;
+    }
+    textarea
+    {
+        min-height: 10vh;
+    }
+}
+
+.gGRow
+{
+    width: 100%;
+    display: grid;
+    grid: auto / 1fr;
+    gap: 1rem;
 }
 
 .guessingGame
@@ -177,4 +201,11 @@ background-image: url(/assets/img/2ndPR.svg);
 .thirdP
 {
 background-image: url(/assets/img/3rdPR.svg);
+}
+
+button
+{
+    border-radius: 5rem;
+    max-width: 50%;
+    margin: 2rem 0rem;
 }
