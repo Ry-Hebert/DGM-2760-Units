@@ -1,0 +1,89 @@
+body
+{
+width: 100vw;
+padding: 0px;
+margin: 0px;
+}
+
+#header-sec
+{
+    background-image: url(../img/islandB&B.jpeg);
+    height: 75vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+@media (min-width: 961px)
+{
+.hero_ban
+{
+    width: 620pt;
+    background-color: #ffffffa0;
+    z-index: 5;
+    margin: 5vw;
+    border-radius: .5rem;
+    font-size: 2rem;
+    padding: 1rem;
+}
+}
+
+@media (max-width: 960px)
+{
+    .hero_ban
+    {
+    max-width: 90%;
+    background-color: #ffffffa0;
+    z-index: 5;
+    margin: 5vw;
+    border-radius: .5rem;
+    font-size: 2rem;
+    padding: 1rem;
+    }
+}
+
+.hero_ban h1
+{
+    padding: 0;
+    margin: 0;
+}
+
+.content
+{
+    font-size: 1.1rem;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.welcome_ban
+{
+    width: 100vw;
+    text-align: center; 
+    font-size: 1.5rem;
+}
+
+.content_item
+{
+    margin: 0px 5vw 0px 5vw;
+}
+
+ul
+{
+    margin: 0;
+}
+
+.section1
+{    
+    width: 100%;
+}
+
+.footer
+{
+    margin: 0px 5vw;
+    padding-top: 5vh
+}
