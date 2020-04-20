@@ -81,7 +81,7 @@ select {
   }
 }
 
-footer, .guessingGame {
+footer, .pageContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -196,14 +196,27 @@ main {
 }
 
 .gGCol {
-  width: 50%;
+  min-width: 50%;
+  display: -ms-grid;
+  display: grid;
+  grid: auto / 1fr 1fr 1fr 1fr;
 }
 
-.guessingGame {
+.gGCol h3 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / span 4;
+}
+
+.pageContent {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   min-height: 25vh;
+  display: -ms-grid;
+  display: grid;
+  grid: auto / 1fr;
+  min-width: 100%;
 }
 
 #numberGuess {
@@ -243,6 +256,21 @@ input {
 
 .thirdP {
   background-image: url(/assets/img/3rdPR.svg);
+}
+
+button {
+  border-radius: 5rem;
+  min-width: 100%;
+  margin: 1rem 0rem;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+}
+
+#pizzaOut {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / span 4;
 }
 
 @media only screen and (min-width: 34rem) {
