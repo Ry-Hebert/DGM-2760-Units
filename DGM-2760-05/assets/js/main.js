@@ -18,6 +18,7 @@ displayTrees = () =>
 {
     let aOfTrees = null
     tArr.forEach(x => {if(aOfTrees == null){aOfTrees = `${x} <br>`}else{aOfTrees += `${x} <br>`}})
+    if(tArr.length < 1){output.innerHTML = `<p>Empty</p>`; return;}
     output.innerHTML = `<p>${aOfTrees}</p>`
 }
 
@@ -37,6 +38,7 @@ addStart = () =>
 
 rmv1 = () =>
 {
+    if(tArr.length < 1){return disError()}
     tArr.shift()
     console.log(tArr)
     displayTrees()
@@ -44,6 +46,7 @@ rmv1 = () =>
 
 rmv2 = () =>
 {
+    if(tArr.length < 2){return disError()}
     tArr.splice(1,1)
     console.log(tArr)
     displayTrees()
@@ -51,6 +54,7 @@ rmv2 = () =>
 
 rmvLast = () =>
 {
+    if(tArr.length < 1){return disError()}
     tArr.pop()
     console.log(tArr)
     displayTrees()
@@ -80,6 +84,11 @@ dis3 = () =>
 dis4 = () =>
 {
     output.innerHTML = `<p>${tArr[3]}</p>`
+}
+
+disError = () =>
+{
+    errOut.innerHTML = `<p>You can't delete from an empty position. Add more trees to the list to continue.</p>`
 }
 
 document.querySelector('#addRedEnd').onclick = addEnd
