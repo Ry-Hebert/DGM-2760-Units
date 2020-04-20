@@ -7,8 +7,8 @@
     <meta name="description" content="Fill Me In">
     <meta name="author" content="John Doe">
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-    <title>U-03 Guessing Game</title>
-    <link rel="stylesheet" href="/assets/scss/styles.css">
+    <title>U-07 Pizza Emporium</title>
+    <link rel="stylesheet" href="assets/scss/styles.css">
 </head>
 <body onload="contentLoad();">
     <header>
@@ -21,37 +21,67 @@
     </header>
     <main>
         <section class="landing-page">
-            <h1>(High / Lo) Number Guessing Game</h1>
+            <h1>Pizza Order Form</h1>
             <h2>What I learned</h2>
             <ul>
-                <li>creating a cryptographically secure random numbers</li>
-                <li>Manipulating DOM Elements (adding, classes, id's, etc.)</li>
-                <li>Update and provide feedback on user inputs.</li>
+                <li>Create an object literal with properties and methods</li>
+                <li>Set the properties in an object</li>
+                <li>Access the properties in an object</li>
+                <li>Access the methods of an object</li>
+                <li>Use math operators</li>
+                <li>Use template literals</li>
+                <li>Use query Selector and textContent to dynamically change text on the screen</li>
             </ul>
             <h2>Instructions</h2>
             <p class="instructions">
-                The objective of the game is to try and guess the randomly chosen number (any number from 1 to 15) in as few tries as possible. You will be awarded a ribbon based upon your score.
+                Select what type of pizza you would like from the options provided and then click on "Build Pizza" or "Shopping List"
             </p>
         </section>
-        <section class="guessingGame">
+        <section class="pageContent">
             <div class="gGCol">
-                <h3>Play</h3>
-                <div class="col1">
-                        <input type="number" id="numberGuess">
-                        <input type="submit" onclick="submitGuess()" id="subGuess">
+                <h3>Crust Options</h3>
+                <div class="inputGroup">
+                    <input type="radio" id="thick" name="crust" value="thick">
+                    <label for="thick">Thick</label>
+                </div>
+                <div class="inputGroup">
+                    <input type="radio" id="thin" name="crust" value="thin" checked>
+                    <label for="thin">Thin</label>
                 </div>
             </div>
             <div class="gGCol">
-                <h3>Trys</h3>
-                <p id="tryCount">0</p>
+                <h3>Topping Options</h3>
+                <div class="inputGroup">
+                    <input type="radio" id="sausage" name="topping" value="sausage">
+                    <label for="sausage">Sausage</label>
+                </div>
+                <div class="inputGroup">
+                    <input type="radio" id="pepperoni" name="topping" value="pepperoni" checked>
+                    <label for="pepperoni">Pepperoni</label>
+                </div>
             </div>
             <div class="gGCol">
-                <h3>Feedback</h3>
-                <p id="feedback"></p>
+                <h3>Size Options</h3>
+                <div class="inputGroup">
+                    <input type="radio" id="small" name="size" value="small" checked>
+                    <label for="small">Small</label>
+                </div>
+                <div class="inputGroup">
+                    <input type="radio" id="large" name="size" value="large">
+                    <label for="large">Large</label>
+                </div>
             </div>
             <div class="gGCol">
-                <h3>Award</h3>
-                <div id="playerAward"></div>
+                <h3>Time to Eat</h3>
+                <button id="orderP">Order Pizza</button>
+            </div>
+            <div class="gGCol">
+                <h3>Shopping List</h3>
+                <button id="shoppingL">Tell Story</button>
+            </div>
+            <div class="gGCol">
+                <h3>Results</h3>
+                <div id="pizzaOut"></div>
             </div>
         </section>
     </main>

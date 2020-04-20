@@ -121,15 +121,23 @@ main
 .gGCol
 {
     @extend %flex-col;
-    width: 50%;
+    min-width: 50%;
+    display: grid;
+    grid: auto / 1fr 1fr 1fr 1fr;
+    h3
+    {
+        grid-column: 1 / span 4;
+    }
 }
 
-.guessingGame
+.pageContent
 {
     @extend %flex-row;
     justify-content: flex-start;
     min-height: 25vh;
-    
+    display: grid;
+    grid: auto / 1fr;
+    min-width: 100%;
 }
 
 #numberGuess
@@ -177,4 +185,17 @@ background-image: url(/assets/img/2ndPR.svg);
 .thirdP
 {
 background-image: url(/assets/img/3rdPR.svg);
+}
+
+button
+{
+    border-radius: 5rem;
+    min-width: 100%;
+    margin: 1rem 0rem;
+    grid-column: 1 / span 2;
+}
+
+#pizzaOut
+{
+    grid-column: 1 / span 4;
 }
