@@ -111,7 +111,7 @@ main p {padding: .2rem 0 0 2%; line-height: 150%;}
 
 main ul {margin: 0;}
 main ul.objectives li {
-	list-style-image: url("../images/check.png");
+	list-style-image: url("../img/check.png");
 	margin-left: 3rem;
 
 }
