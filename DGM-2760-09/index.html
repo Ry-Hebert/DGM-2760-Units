@@ -1,63 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8" >
-    <!--Do Not Lie-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Fill Me In">
-    <meta name="author" content="John Doe">
-    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-    <title>U-03 Guessing Game</title>
-    <link rel="stylesheet" href="assets/scss/styles.css">
+<!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="UTF-8">
+<title>10 Menu Duplication</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+
 </head>
-<body onload="contentLoad();">
-    <header>
-        <div class="logo-head">
-            <div>
-                <h1 id="pageTitle"></h1>
-                <h2 id="pageSlogan"></h2>
-            </div>
-        </div>
-    </header>
-    <main>
-        <section class="landing-page">
-            <h1>(High / Lo) Number Guessing Game</h1>
-            <h2>What I learned</h2>
-            <ul>
-                <li>creating a cryptographically secure random numbers</li>
-                <li>Manipulating DOM Elements (adding, classes, id's, etc.)</li>
-                <li>Update and provide feedback on user inputs.</li>
-            </ul>
-            <h2>Instructions</h2>
-            <p class="instructions">
-                The objective of the game is to try and guess the randomly chosen number (any number from 1 to 15) in as few tries as possible. You will be awarded a ribbon based upon your score.
-            </p>
-        </section>
-        <section class="guessingGame">
-            <div class="gGCol">
-                <h3>Play</h3>
-                <div class="col1">
-                        <input type="number" id="numberGuess">
-                        <input type="submit" onclick="submitGuess()" id="subGuess">
-                </div>
-            </div>
-            <div class="gGCol">
-                <h3>Trys</h3>
-                <p id="tryCount">0</p>
-            </div>
-            <div class="gGCol">
-                <h3>Feedback</h3>
-                <p id="feedback"></p>
-            </div>
-            <div class="gGCol">
-                <h3>Award</h3>
-                <div id="playerAward"></div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p id="copyright">Copyright &copy; 2019 Ryan Hébert </p>
-    </footer>
-    <script src="assets/js/main.js"></script>
+
+<body>
+<div class="smallMenuLink"><a href="#smallNavArea">MENU</a></div>
+
+
+<nav>
+<ul id="primaryNavigation">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="location.html">Location</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="services.html">Services</a></li>
+</ul>
+<div class="keepOpen"></div>
+</nav>
+
+
+<main>
+<h1>Truck Power</h1>
+<img class="myPhoto" src="images/truck.png">
+<h2>What I learned</h2>
+<ul class="objectives">
+<li>Query Selector</li>
+<li>forEach Loop</li>
+<li>Append Child</li>
+<li>Get Attribute</li>
+<li>Set Attribute</li>
+</ul>
+
+<h2>Body Copy</h2>
+<p>Rhoncus eros elementum a urna elementum nec placerat augue dignissim dictumst tincidunt. Nascetur pid. Risus phasellus pulvinar porttitor, dis, mauris? Ultricies ut magna. Dolor massa nunc? Elementum ultrices magnis cum, in dictumst et quis platea, risus pulvinar! Tortor mattis hac montes nisi scelerisque tincidunt, tempor est magna! Vel mauris massa magna tristique? Dignissim nunc dapibus aliquam et integer arcu placerat! Et sit tincidunt tincidunt ac, scelerisque, arcu nascetur adipiscing sit adipiscing non! Aliquam nascetur phasellus, placerat lorem, ultricies, urna velit dis! Lectus sit duis! Porttitor integer augue magnis aliquet enim. Ac nunc urna in proin, in, platea rhoncus rhoncus ut! Magna magna turpis montes ac aenean mattis ridiculus dictumst diam. Habitasse, tristique hac lacus! Amet ultricies turpis odio ut, amet.</p>
+
+<p>Scelerisque in mid ac auctor integer proin. Turpis in? Porttitor pulvinar ut mattis aliquam massa? Quis amet, lorem turpis odio? Porttitor sagittis odio. Habitasse enim pid, et amet tempor. Urna aenean dapibus lundium pulvinar in non lundium porttitor magnis ac rhoncus? Magna vel integer amet turpis scelerisque non sociis lectus scelerisque lorem aliquam ut porttitor turpis nec sociis magna, habitasse. Platea dapibus adipiscing platea platea lorem montes odio, turpis habitasse, proin, velit egestas nec! In, etiam, enim hac amet sed ultricies, integer lacus quis egestas, tincidunt sed urna vel? Proin adipiscing ac sociis proin ridiculus. Egestas elit turpis proin lorem nisi, vel dapibus! Proin odio vel magna in enim magna egestas, elementum pulvinar lorem ac aliquet porta augue turpis.</p>
+
+
+
+</main>
+<nav id="smallNavArea"></nav>
+<footer>
+<p>Assignment for DGM2760</p>
+</footer>
+
 </body>
+<script type="text/javascript" src="js/main.js"></script>
 </html>
