@@ -4,37 +4,47 @@ contentLoad = () =>
     let pos2 = document.querySelector('#pageSlogan')
     let pos3 = document.querySelector('#copyright')
 
-    pos1.textContent=`Pizza Emporium`
+    pos1.textContent=`Grant's Tomb`
     pos2.textContent=`Literal Objects`
     pos3.textContent=`Copyright © ${new Date().getFullYear()} Ryan Hébert`
 }
 
 response = (x) =>{document.querySelector('#pizzaOut').innerHTML = x}
 
-const pizza =
+const question = 
 {
-    crust: 'thin',
-    size: 'small',
-    topping: 'pepperoni',
-    buildPizza: () =>
+    stem: "Who is buried in Grant's Tomb",
+    o1: "Linda",
+    o2: "Tom",
+    o3: "Kendra",
+    o4: "Grant",
+    correct: 4,
+    display: () =>
     {
-        console.log('buildPizza method has been called')
-        let messageOut = `Baking a ${pizza.size} ${pizza.topping} pizza with a ${pizza.crust} crust.`
-        response(messageOut)
+        document.querySelector('#stem').innerHTML = `<h3>${question.stem}</h3>`
+        document.querySelector('#a1').innerHTML = `<p>(A): ${question.o1}</p>`
+        document.querySelector('#a2').innerHTML = `<p>(B): ${question.o2}</p>`
+        document.querySelector('#a3').innerHTML = `<p>(C): ${question.o3}</p>`
+        document.querySelector('#a4').innerHTML = `<p>(D): ${question.o4}</p>`
     },
-    shoppingList: () =>
+    check: (uc) =>
     {
-        let flour = 1
-        if(pizza.crust === 'thick'){flour *= 2}
-        if(pizza.size === 'large'){flour *= 2}
-        console.log('Shopping List method has been called')
-        let messageOut = `You will need to purchase ${flour} cups of flour and 1lb of ${pizza.topping} for your pizza.`
-        response(messageOut)
+        console.log(uc)
+        let feedbackSec = document.querySelector('#feedback')
+        if(uc == question.correct)
+        {
+            feedbackSec.innerHTML = `You are correct!`
+            feedbackSec.classList.add("aGreen")
+            feedbackSec.classList.remove("aRed")
+        }
+        else
+        {
+            feedbackSec.innerHTML = `Sorry, you are incorrect`
+            feedbackSec.classList.add("aRed")
+            feedbackSec.classList.remove("aGreen")
+        }
     }
 }
 
-document.querySelectorAll('input[name="crust"]').forEach(item => item.addEventListener('click', () => pizza.crust = item.value))
-document.querySelectorAll('input[name="topping"]').forEach(item => item.addEventListener('click', () => pizza.topping = item.value))
-document.querySelectorAll('input[name="size"]').forEach(item => item.addEventListener('click', () => pizza.size = item.value))
-document.querySelector('#orderP').addEventListener('click', pizza.buildPizza)
-document.querySelector('#shoppingL').addEventListener('click', pizza.shoppingList)
+document.querySelectorAll('.qButton').forEach(item => item.addEventListener('click', () => question.check(item.value)))
+question.display()

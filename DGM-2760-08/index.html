@@ -7,7 +7,7 @@
     <meta name="description" content="Fill Me In">
     <meta name="author" content="John Doe">
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-    <title>U-07 Pizza Emporium</title>
+    <title>U-08 Grant's Tomb</title>
     <link rel="stylesheet" href="assets/scss/styles.css">
 </head>
 <body onload="contentLoad();">
@@ -21,67 +21,26 @@
     </header>
     <main>
         <section class="landing-page">
-            <h1>Pizza Order Form</h1>
+            <h1>Grant's Tomb</h1>
             <h2>What I learned</h2>
             <ul>
                 <li>Create an object literal with properties and methods</li>
-                <li>Set the properties in an object</li>
                 <li>Access the properties in an object</li>
                 <li>Access the methods of an object</li>
-                <li>Use math operators</li>
-                <li>Use template literals</li>
+                <li>Use template strings</li>
                 <li>Use query Selector and textContent to dynamically change text on the screen</li>
+                <li>Implement conditional checking</li>
             </ul>
-            <h2>Instructions</h2>
-            <p class="instructions">
-                Select what type of pizza you would like from the options provided and then click on "Build Pizza" or "Shopping List"
-            </p>
         </section>
         <section class="pageContent">
-            <div class="gGCol">
-                <h3>Crust Options</h3>
-                <div class="inputGroup">
-                    <input type="radio" id="thick" name="crust" value="thick">
-                    <label for="thick">Thick</label>
-                </div>
-                <div class="inputGroup">
-                    <input type="radio" id="thin" name="crust" value="thin" checked>
-                    <label for="thin">Thin</label>
-                </div>
-            </div>
-            <div class="gGCol">
-                <h3>Topping Options</h3>
-                <div class="inputGroup">
-                    <input type="radio" id="sausage" name="topping" value="sausage">
-                    <label for="sausage">Sausage</label>
-                </div>
-                <div class="inputGroup">
-                    <input type="radio" id="pepperoni" name="topping" value="pepperoni" checked>
-                    <label for="pepperoni">Pepperoni</label>
-                </div>
-            </div>
-            <div class="gGCol">
-                <h3>Size Options</h3>
-                <div class="inputGroup">
-                    <input type="radio" id="small" name="size" value="small" checked>
-                    <label for="small">Small</label>
-                </div>
-                <div class="inputGroup">
-                    <input type="radio" id="large" name="size" value="large">
-                    <label for="large">Large</label>
-                </div>
-            </div>
-            <div class="gGCol">
-                <h3>Time to Eat</h3>
-                <button id="orderP">Order Pizza</button>
-            </div>
-            <div class="gGCol">
-                <h3>Shopping List</h3>
-                <button id="shoppingL">Tell Story</button>
-            </div>
-            <div class="gGCol">
-                <h3>Results</h3>
-                <div id="pizzaOut"></div>
+            <h2>Question of the day</h2>
+            <div class="questionContainer">
+                <div id="stem"></div>
+                <button id="a1" class="qButton" value="1"></button>
+                <button id="a2" class="qButton" value="2"></button>
+                <button id="a3" class="qButton" value="3"></button>
+                <button id="a4" class="qButton" value="4"></button>
+                <div id="feedback"></div>
             </div>
         </section>
     </main>

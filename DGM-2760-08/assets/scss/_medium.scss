@@ -20,3 +20,24 @@ header
         min-height: 20vh;
     }
 }
+
+.questionContainer
+{
+    background-color: $qColor;
+    border-radius: 1rem;
+    display: grid;
+    grid: repeat(6, minmax(0,1fr)) / 1fr;
+    height: 25vh;
+    width: 50%;
+    div
+    {
+        width: 100%;
+    }
+    button
+    {
+        background-color: lighten($color: $qColor, $amount: 40%);
+        height: 100%;
+        margin: 0rem;
+        border-radius: 0rem;
+    }
+}

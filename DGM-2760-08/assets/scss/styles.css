@@ -267,10 +267,61 @@ button {
   grid-column: 1 / span 2;
 }
 
-#pizzaOut {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-column: 1 / span 4;
+.questionContainer {
+  background-color: #03a3a3;
+  border-radius: 1rem;
+  display: -ms-grid;
+  display: grid;
+  grid: repeat(6, minmax(0, 1fr))/1fr;
+  height: 50vh;
+}
+
+.questionContainer div {
+  width: 100%;
+}
+
+.questionContainer button {
+  background-color: #76fcfc;
+  height: 100%;
+  margin: 0rem;
+  border-radius: 0rem;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.questionContainer #stem {
+  border-radius: 1rem 1rem 0rem 0rem;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.questionContainer #feedback {
+  border-radius: 0rem 0rem 1rem 1rem;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.aRed {
+  background-color: #960000;
+}
+
+.aGreen {
+  background-color: #005000;
 }
 
 @media only screen and (min-width: 34rem) {
@@ -286,11 +337,47 @@ button {
   header div {
     min-height: 20vh;
   }
+  .questionContainer {
+    background-color: #03a3a3;
+    border-radius: 1rem;
+    display: -ms-grid;
+    display: grid;
+    grid: repeat(6, minmax(0, 1fr))/1fr;
+    height: 25vh;
+    width: 50%;
+  }
+  .questionContainer div {
+    width: 100%;
+  }
+  .questionContainer button {
+    background-color: #76fcfc;
+    height: 100%;
+    margin: 0rem;
+    border-radius: 0rem;
+  }
 }
 
 @media only screen and (min-width: 60rem) {
   body {
     padding: 5rem 5rem 0rem 5rem;
+  }
+  .questionContainer {
+    background-color: #03a3a3;
+    border-radius: 1rem;
+    display: -ms-grid;
+    display: grid;
+    grid: repeat(6, minmax(0, 1fr))/1fr;
+    height: 25vh;
+    width: 30%;
+  }
+  .questionContainer div {
+    width: 100%;
+  }
+  .questionContainer button {
+    background-color: #76fcfc;
+    height: 100%;
+    margin: 0rem;
+    border-radius: 0rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
