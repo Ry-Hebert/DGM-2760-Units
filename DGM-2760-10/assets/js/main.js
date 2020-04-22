@@ -40,7 +40,7 @@ hotelOut = (choice) =>
     document.querySelector('#hRooms').innerHTML = `<p>Number of Rooms: ${objFind.rooms}</p>`
     document.querySelector('#hGym').innerHTML = `<p>Gym Available: ${objFind.gym}</p>`
     document.querySelector('#hRoomT').innerHTML = `<p>Room Types: ${objFind.roomTypes}</p>`
-    document.querySelector('#hImg').innerHTML = `<img href='${objFind.picture}'>`
+    document.querySelector('#hImg').innerHTML = `<img src='assets/img/${objFind.picture}'>`
 }
 
 document.querySelectorAll('.hButton').forEach(item => item.addEventListener('click', () => hotelOut(item.value)))
