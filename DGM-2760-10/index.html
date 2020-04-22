@@ -7,51 +7,59 @@
     <meta name="description" content="Fill Me In">
     <meta name="author" content="John Doe">
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-    <title>U-03 Guessing Game</title>
-    <link rel="stylesheet" href="/assets/scss/styles.css">
+    <title>U-10 Hotel Booking</title>
+    <link rel="stylesheet" href="assets/scss/styles.css">
 </head>
-<body onload="contentLoad();">
+<body>
     <header>
         <div class="logo-head">
             <div>
-                <h1 id="pageTitle"></h1>
-                <h2 id="pageSlogan"></h2>
+                <h1 id="pageTitle">Hotel California</h1>
+                <h2 id="pageSlogan">You can never leave</h2>
             </div>
         </div>
     </header>
     <main>
         <section class="landing-page">
-            <h1>(High / Lo) Number Guessing Game</h1>
+            <h1>Hotel California</h1>
             <h2>What I learned</h2>
             <ul>
-                <li>creating a cryptographically secure random numbers</li>
-                <li>Manipulating DOM Elements (adding, classes, id's, etc.)</li>
-                <li>Update and provide feedback on user inputs.</li>
+                <li>Create an external JSON file</li>
+                <li>Load the JSON file using the Fetch API</li>
+                <li>How to use a try... catch block</li>
+                <li>How to use a async... await to make asynchronous function calls</li>
+                <li>How to retrieve and store resolved promise data</li>
+                <li>Display data from the JSON file on the web page using three different buttons</li>
             </ul>
-            <h2>Instructions</h2>
-            <p class="instructions">
-                The objective of the game is to try and guess the randomly chosen number (any number from 1 to 15) in as few tries as possible. You will be awarded a ribbon based upon your score.
-            </p>
         </section>
         <section class="guessingGame">
             <div class="gGCol">
-                <h3>Play</h3>
-                <div class="col1">
-                        <input type="number" id="numberGuess">
-                        <input type="submit" onclick="submitGuess()" id="subGuess">
+                <div class="selectH">
+                    <h2>Select a Hotel</h2>
+                    <div class="hotelOpt">
+                        <button id="h1" class="hButton" value="1">Marriott Hotel Rooms</button>
+                        <button id="h2" class="hButton" value="2">Sheraton Hotel Rooms</button>
+                        <button id="h3" class="hButton" value="3">Hilton Hotel Rooms</button>
+                    </div>
                 </div>
-            </div>
-            <div class="gGCol">
-                <h3>Trys</h3>
-                <p id="tryCount">0</p>
-            </div>
-            <div class="gGCol">
-                <h3>Feedback</h3>
-                <p id="feedback"></p>
-            </div>
-            <div class="gGCol">
-                <h3>Award</h3>
-                <div id="playerAward"></div>
+                <div class="hotelInfo">
+                    <h2>Hotel Info</h2>
+                    <h2 id="hName"></h2>
+                    <h3 id="hAdd">Address:</h3>
+                    <p id="address"></p>
+                    <div class="hISec">
+                        <div id="hRooms">
+                            <p>Number of Rooms:</p>
+                        </div>
+                        <div id="hGym">
+                            <p>Gym Available:</p>
+                        </div>
+                        <div id="hRoomT">
+                            <p>Room Types:</p>
+                        </div>
+                    </div>
+                    <div id="hImg"><img></div>
+                </div>
             </div>
         </section>
     </main>
